@@ -3,7 +3,7 @@ package com.chessboard.pices;
 import com.chessboard.common.Position;
 import com.chessboard.movementstrategy.MovementStrategy;
 
-public abstract class Piece {
+public abstract class Piece implements  IPiece {
     private Position  position;
     private MovementStrategy  movementStrategy;
 
