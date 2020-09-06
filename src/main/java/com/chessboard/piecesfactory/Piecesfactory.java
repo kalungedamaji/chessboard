@@ -3,10 +3,10 @@ package com.chessboard.piecesfactory;
 import com.chessboard.board.Board;
 import com.chessboard.common.PieceEnum;
 import com.chessboard.common.Position;
-import com.chessboard.movementstrategy.KingMovementStrategy;
-import com.chessboard.movesvalidator.BoundaryValidator;
-import com.chessboard.pices.IPiece;
-import com.chessboard.pices.King;
+import com.chessboard.strategy.movement.KingMovementStrategy;
+import com.chessboard.validator.moves.boundary.BoundaryValidator;
+import com.chessboard.pieces.IPiece;
+import com.chessboard.pieces.King;
 
 public class Piecesfactory {
 

@@ -1,4 +1,4 @@
-package com.chessboard.movesvalidator;
+package com.chessboard.validator.moves;
 
 import com.chessboard.board.Board;
 import com.chessboard.common.Position;

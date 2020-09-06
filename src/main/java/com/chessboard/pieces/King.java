@@ -1,8 +1,8 @@
-package com.chessboard.pices;
+package com.chessboard.pieces;
 
 
 import com.chessboard.common.Position;
-import com.chessboard.movementstrategy.MovementStrategy;
+import com.chessboard.strategy.movement.MovementStrategy;
 
 import java.util.List;
 
@@ -13,6 +13,6 @@ public class King extends Piece {
     }
 
     public List<Position> getPossibleMoves(){
-         return  getmovementStrategy().getPossibleMoves();
+         return  getMovementStrategy().getPossibleMoves();
     }
 }

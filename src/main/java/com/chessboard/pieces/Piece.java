@@ -1,7 +1,7 @@
-package com.chessboard.pices;
+package com.chessboard.pieces;
 
 import com.chessboard.common.Position;
-import com.chessboard.movementstrategy.MovementStrategy;
+import com.chessboard.strategy.movement.MovementStrategy;
 
 public abstract class Piece implements  IPiece {
     private Position  position;
@@ -15,7 +15,7 @@ public abstract class Piece implements  IPiece {
         return position;
     }
 
-    public MovementStrategy getmovementStrategy() {
+    public MovementStrategy getMovementStrategy() {
         return movementStrategy;
     }
 
