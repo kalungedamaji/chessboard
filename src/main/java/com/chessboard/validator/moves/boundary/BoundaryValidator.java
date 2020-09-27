@@ -6,13 +6,13 @@ import com.chessboard.validator.moves.MovesValidator;
 
 public class BoundaryValidator extends MovesValidator {
 
-    public BoundaryValidator(Position position, Board board) {
-        super(position, board);
+    public BoundaryValidator(Board board) {
+        super(null,board);
     }
 
     public boolean validateMove(Position nextPosition) {
-        if ((nextPosition.getX() < getBoard().getNumberOfColumn()) && (nextPosition.getY() < getBoard().getNumberOfRows())
-                && ((nextPosition.getX() > 0 ) && (nextPosition.getY() > 0))) {
+        if ((nextPosition.getColumn() <= getBoard().getNumberOfColumn()) && (nextPosition.getRow() <= getBoard().getNumberOfRows())
+                && ((nextPosition.getColumn() > 0 ) && (nextPosition.getRow() > 0))) {
             return true;
         }
         return false;

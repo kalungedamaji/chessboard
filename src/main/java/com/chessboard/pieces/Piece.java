@@ -1,23 +1,19 @@
 package com.chessboard.pieces;
 
-import com.chessboard.common.Position;
-import com.chessboard.strategy.movement.MovementStrategy;
+import com.chessboard.strategy.movement.IMovementStrategy;
 
-public abstract class Piece implements  IPiece {
-    private Position  position;
-    private MovementStrategy  movementStrategy;
+public abstract class Piece implements IPiece {
+    private IMovementStrategy movementStrategy;
 
-    public Piece(Position  position,MovementStrategy  movementStrategy){
-        this.position=position;
-        this.movementStrategy=movementStrategy;
-    }
-    public Position getPosition() {
-        return position;
+    public void setMovementStrategy(IMovementStrategy movementStrategy) {
+        this.movementStrategy = movementStrategy;
     }
 
-    public MovementStrategy getMovementStrategy() {
+    public IMovementStrategy getMovementStrategy() {
         return movementStrategy;
     }
-
-
 }
+
+
+
+

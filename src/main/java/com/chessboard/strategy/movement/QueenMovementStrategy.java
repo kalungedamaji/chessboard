@@ -2,20 +2,20 @@ package com.chessboard.strategy.movement;
 
 import com.chessboard.board.Board;
 import com.chessboard.common.Position;
-import com.chessboard.movesgenerator.KingMovesGenerator;
+import com.chessboard.movesgenerator.QueenMovesGenerator;
 
 import java.util.List;
 
-public class KingMovementStrategy extends MovementStrategy {
-
-    public KingMovementStrategy(Board board) {
-        setMovesGenerator(new KingMovesGenerator(board));
+public class QueenMovementStrategy extends MovementStrategy {
+    public QueenMovementStrategy(Board board) {
+        setMovesGenerator(new QueenMovesGenerator(board));
     }
 
-    public  KingMovementStrategy(){
+    public QueenMovementStrategy(){
 
     }
 
+    @Override
     public List<Position> getPossibleMoves(Position position) {
         return getMovesGenerator().getPossibleMoves(position);
     }

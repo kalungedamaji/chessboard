@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface IMovementStrategy {
 
-    public List<Position> getPossibleMoves();
+    public List<Position> getPossibleMoves(Position  position);
 
 }

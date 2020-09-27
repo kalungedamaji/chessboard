@@ -3,7 +3,7 @@ package com.chessboard.validator.moves;
 import com.chessboard.board.Board;
 import com.chessboard.common.Position;
 
-public abstract class MovesValidator implements  ImovesValidator {
+public abstract class MovesValidator implements IMovesValidator {
     private Position position;
     private    Board  board;
 
