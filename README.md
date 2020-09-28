@@ -1,6 +1,6 @@
 # ChessBoard Application
 
-### ChessBoard Problem Statement
+## ChessBoard Problem Statement
 ```
 The chessboard is an 8 x 8 grid with 64 cells in it.
 With 8 rows (A, B, C.... H) and 8 columns (1, 2, 3.... 8), each cell can be uniquely
@@ -22,19 +22,20 @@ Can also move 1 step forward diagonally, in order to eliminate an opposing
 piece.
 ```
 ![Chessboard](https://github.com/kalungedamaji/chessboard/blob/master/src/main/resources/Chessboard.png?raw=true)
-### Objective of your program:
+## Objective of your program:
 Your program should simulate the movement of each unique chess piece on an
 empty chessboard.
 
-# Assumption:
+### Assumption:
  Assume that the board is empty. This means that the pawn cannot move
   diagonally.
-# Sample inputs and outputs:
+### Sample inputs and outputs:
 Input – “King D5”
 Output – “D6, E6, E5, E4, D4, C4, C5, C6”
-### Technical Design
+## Technical Diagram 
+ ### Class Diagram
 ![Classdigram](https://github.com/kalungedamaji/chessboard/blob/master/src/main/resources/classdig.png?raw=true)
-### Technology Stack Used
+## Technology Stack Used
 1. Java 8u252
 2. Junit 5
 3. Mockito 2.2
