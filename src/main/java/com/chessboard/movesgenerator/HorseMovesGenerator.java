@@ -1,14 +1,19 @@
 package com.chessboard.movesgenerator;
 
 import com.chessboard.board.Board;
+import com.chessboard.common.ChessUtil;
 import com.chessboard.common.MoveFunction;
 import com.chessboard.common.Position;
 import com.chessboard.common.MoveTwiceFunction;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HorseMovesGenerator extends MovesGeneratorImpl {
+    private static Logger logger = LoggerFactory.getLogger(HorseMovesGenerator.class);
+
     private static MoveTwiceFunction<MoveFunction<Position>, Position> moveTwiceFunction = (position, moveFunction) ->
             moveFunction.nextMove(moveFunction.nextMove(position));
 
@@ -18,6 +23,8 @@ public class HorseMovesGenerator extends MovesGeneratorImpl {
 
     @Override
     public List<Position> getPossibleMoves(Position position) {
+        logger.debug("getPossibleMoves method called with argument "+ position.toString());
+
         List<Position> possibleMovesList = new ArrayList<>();
 
         Position twoUpPosition = moveTwiceFunction.move(position, getUpMoveFunction());
@@ -35,6 +42,8 @@ public class HorseMovesGenerator extends MovesGeneratorImpl {
         validateAndAddToList(possibleMovesList, getDownMoveFunction().nextMove(twoLeftPosition));
         validateAndAddToList(possibleMovesList, getUpMoveFunction().nextMove(twoLeftPosition));
         validateAndAddToList(possibleMovesList, getLeftMoveFunction().nextMove(twoUpPosition));
+
+        logger.debug("getPossibleMoves returns the possible moves "+ ChessUtil.getPositionListAsString(possibleMovesList));
 
         return possibleMovesList;
     }

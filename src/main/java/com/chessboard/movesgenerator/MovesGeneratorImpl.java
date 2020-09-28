@@ -1,15 +1,18 @@
 package com.chessboard.movesgenerator;
 
 import com.chessboard.board.Board;
+import com.chessboard.common.ChessUtil;
 import com.chessboard.common.MoveFunction;
 import com.chessboard.common.Position;
 import com.chessboard.validator.moves.boundary.BoundaryValidator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class MovesGeneratorImpl implements IMovesGenerator {
-
+    private static Logger logger = LoggerFactory.getLogger(MovesGeneratorImpl.class);
     private Board board;
     private MoveFunction<Position> upMoveFunction = p -> new Position(p.getColumn() , p.getRow()+1);
     private MoveFunction<Position> downMoveFunction = p -> new Position(p.getColumn(), p.getRow()- 1);
@@ -25,13 +28,14 @@ public abstract class MovesGeneratorImpl implements IMovesGenerator {
     }
 
     public List<Position> getAllMovesTillBoundary(Position position, MoveFunction<Position> moveFunction) {
-        List<Position> positionList = new ArrayList<>();
+        logger.debug("getAllMovesTillBoundary method called with argument "+ position.toString());
+        List<Position> positionList = new ArrayList();
         Position nextPosition = moveFunction.nextMove(position);
         while (getBoundaryValidator().validateMove(nextPosition)) {
             positionList.add(nextPosition);
             nextPosition = moveFunction.nextMove(nextPosition);
         }
-
+        logger.debug("getPossibleMoves returns the possible moves "+ ChessUtil.getPositionListAsString(positionList));
         return positionList;
     }
 
