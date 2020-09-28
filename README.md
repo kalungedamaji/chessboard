@@ -8,7 +8,7 @@ identified with its cell number. This can be seen illustrated below.
 ```
 ![Chessboard](https://github.com/kalungedamaji/chessboard/blob/master/src/main/resources/Chessboard.png?raw=true)
 ### Technical Design
-
+![Classdigram](https://github.com/kalungedamaji/chessboard/blob/master/src/main/resources/classdig.png?raw=true)
 ### Technology Stack Used
 1. Java 8u252
 2. Junit 5
