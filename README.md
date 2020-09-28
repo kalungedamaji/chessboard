@@ -32,7 +32,7 @@ empty chessboard.
 ### Sample inputs and outputs:
 Input – “King D5”
 Output – “D6, E6, E5, E4, D4, C4, C5, C6”
-## Technical Diagram 
+## Technical Design 
  ### Class Diagram
 ![Classdigram](https://github.com/kalungedamaji/chessboard/blob/master/src/main/resources/classdig.png?raw=true)
 ## Technology Stack Used
